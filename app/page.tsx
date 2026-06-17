@@ -27,7 +27,6 @@ export default function Home() {
       <Header onNewAlbum={() => setShowModal(true)} />
 
       <main className="max-w-7xl mx-auto px-6 py-14">
-        {/* Hero text */}
         <h1 className="text-5xl font-bold tracking-tight text-gray-900 mb-5">
           Ma ville est mon école
         </h1>
@@ -38,7 +37,6 @@ export default function Home() {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
         </p>
 
-        {/* Albums */}
         {loading ? (
           <div className="flex justify-center items-center h-48">
             <div className="w-10 h-10 border-2 border-gray-900 border-t-transparent rounded-full animate-spin" />
@@ -63,10 +61,7 @@ export default function Home() {
       {showModal && (
         <NewAlbumModal
           onClose={() => setShowModal(false)}
-          onCreated={() => {
-            setShowModal(false)
-            fetchAlbums()
-          }}
+          onCreated={() => { setShowModal(false); fetchAlbums() }}
         />
       )}
     </div>
