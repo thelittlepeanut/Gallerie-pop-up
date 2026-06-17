@@ -73,7 +73,7 @@ export default function AlbumPage() {
         <h1 className="text-base font-semibold truncate absolute left-1/2 -translate-x-1/2 max-w-[50%]">{album.name}</h1>
         <button
           onClick={() => setShowDeleteConfirm(true)}
-          className="text-red-400 hover:text-red-300 text-sm font-medium transition-colors"
+          className="bg-white text-red-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 active:scale-95 transition-all"
         >
           Supprimer
         </button>
@@ -112,25 +112,20 @@ export default function AlbumPage() {
 
       {showDeleteConfirm && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl w-full max-w-sm shadow-2xl overflow-hidden">
-            <div className="px-6 pt-6 pb-5 text-center">
-              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                </svg>
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-1">Supprimer l&apos;album</h3>
+          <div className="bg-white rounded-2xl w-full max-w-sm shadow-2xl">
+            <div className="px-8 pt-8 pb-6 border-b border-gray-100">
+              <h3 className="text-xl font-bold text-gray-900 mb-1">Supprimer l&apos;album</h3>
               <p className="text-sm text-gray-500 leading-relaxed">
                 &ldquo;{album.name}&rdquo; et toutes ses photos seront supprimés définitivement.
               </p>
             </div>
-            <div className="border-t border-gray-100 flex divide-x divide-gray-100">
+            <div className="px-8 py-6 flex gap-3">
               <button onClick={() => setShowDeleteConfirm(false)} disabled={deleting}
-                className="flex-1 py-3.5 text-sm font-medium text-gray-700 hover:bg-gray-50 transition disabled:opacity-50">
+                className="flex-1 border border-gray-300 text-gray-700 rounded-xl py-2.5 text-sm font-medium hover:bg-gray-50 transition disabled:opacity-50">
                 Annuler
               </button>
               <button onClick={handleDelete} disabled={deleting}
-                className="flex-1 py-3.5 text-sm font-medium text-red-500 hover:bg-red-50 transition disabled:opacity-50 flex items-center justify-center gap-2">
+                className="flex-1 bg-red-600 text-white rounded-xl py-2.5 text-sm font-medium hover:bg-red-700 transition disabled:opacity-50 flex items-center justify-center gap-2">
                 {deleting ? (
                   <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
