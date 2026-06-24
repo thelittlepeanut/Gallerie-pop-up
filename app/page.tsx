@@ -98,25 +98,24 @@ export default function Home() {
         </p>
 
         <div className="grid grid-cols-2 gap-4 mb-8">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/photo-enfants.jpg"
-            className="w-full rounded-xl object-cover"
-          />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/photo-travaux.jpg"
-            className="w-full rounded-xl object-cover"
-          />
+          <div className="h-80 rounded-xl overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/photo-enfants.jpg"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="h-80 rounded-xl overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/photo-travaux.jpg"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         <p className="text-gray-500 text-lg leading-relaxed  mb-8">
-          CRÉDITS (Forum d'Urbanisme et d'Architecture) architectes-médiatrices
-          Sara ALFIERI Elisabetta CASTELLANO Leslie DROUET coordinatrice du
-          programme "Ma ville est mon école" Ximena PESENTI conception de
-          l'exposition virtuelle Lucie MONEYRON Ximena PESENTI graphisme et mise
-          en page Lucie MONEYRON © Forum d'Urbanisme et d'Architecture – Ville
-          de Nice, 2026 droits réservés pour toutes photographies
+          Une visiste classe par classe
         </p>
 
         {loading ? (
@@ -151,6 +150,38 @@ export default function Home() {
             ))}
           </div>
         )}
+
+        <div className="text-gray-900 text-base leading-relaxed mb-8 mt-12 space-y-4">
+          <p className="font-bold">
+            CRÉDITS (Forum d&apos;Urbanisme et d&apos;Architecture)
+          </p>
+          <div>
+            <p>architectes-médiatrices</p>
+            <p className="font-bold">Sara ALFIERI</p>
+            <p className="font-bold">Elisabetta CASTELLANO</p>
+            <p className="font-bold">Leslie DROUET</p>
+          </div>
+          <div>
+            <p>coordinatrice du programme &quot;Ma ville est mon école&quot;</p>
+            <p className="font-bold">Ximena PESENTI</p>
+          </div>
+          <div>
+            <p>conception de l&apos;exposition virtuelle</p>
+            <p className="font-bold">Lucie MONEYRON</p>
+            <p className="font-bold">Ximena PESENTI</p>
+          </div>
+          <div>
+            <p>graphisme et mise en page</p>
+            <p className="font-bold">Lucie MONEYRON</p>
+          </div>
+          <div>
+            <p>
+              © Forum d&apos;Urbanisme et d&apos;Architecture – Ville de Nice,
+              2026
+            </p>
+            <p>droits réservés pour toutes photographies</p>
+          </div>
+        </div>
       </main>
 
       {showModal && (
