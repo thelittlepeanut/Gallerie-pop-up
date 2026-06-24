@@ -83,6 +83,12 @@ export default function Home() {
           ludique et pédagogique.
         </p>
 
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/diagramme.jpg"
+          className="w-full rounded-xl mb-8 object-cover"
+        />
+
         <p className="text-gray-500 text-lg leading-relaxed  mb-8">
           Pour arriver aux résultats ici présentés, les classes ont été
           accompagnées par les médiatrices selon une série d’étapes dont les
@@ -90,6 +96,19 @@ export default function Home() {
           ville ; visite du quartier et reconnaissance des matériaux ; penser
           leur projet et apprendre à réaliser un pop-up.
         </p>
+
+        <div className="grid grid-cols-2 gap-4 mb-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/photo-enfants.jpg"
+            className="w-full rounded-xl object-cover"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/photo-travaux.jpg"
+            className="w-full rounded-xl object-cover"
+          />
+        </div>
 
         <p className="text-gray-500 text-lg leading-relaxed  mb-8">
           CRÉDITS (Forum d'Urbanisme et d'Architecture) architectes-médiatrices
