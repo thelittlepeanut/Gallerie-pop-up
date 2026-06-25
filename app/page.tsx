@@ -34,8 +34,12 @@ export default function Home() {
         </h1>
 
         <p className="text-lg font-bold text-gray-600 mt-1 mb-4">
-          Ouvrir l'école à l'architecture et à la ville
+          exposition virtuelle 2025-2026 d'une découverte de l'architecture
         </p>
+
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 mt-1 mb-4">
+          Ouvrir l'école à l'architecture et à la ville
+        </h2>
         <p className="text-gray-500 text-lg leading-relaxed  mb-8">
           Depuis sa création, le Forum d'Urbanisme et d'Architecture développe
           des actions de sensibilisation à l'architecture et à la ville dans le
@@ -48,6 +52,18 @@ export default function Home() {
           et acteur du "vivre ensemble".
         </p>
         <p className="text-gray-500 text-lg leading-relaxed  mb-8">
+          Le programme "Ma ville est mon école", destiné aux élèves du primaire,
+          est un de ces outils d'action, par lequel des architectes-médiatrices
+          accompagnent chaque année plus de vingt classes de Nice, tous
+          quartiers confondus, dans la découverte de leur école, de leur
+          quartier et de la ville. À la fois spectateurs et acteurs, les jeunes
+          élèves s'ouvrent alors à l'architecture par le "faire", alternant les
+          exercices pédagogiques avec des visites urbaines et des "ateliers de
+          projet". C'est le résultat du travail développé en 2025/2026 que nous
+          montrons ici.
+        </p>
+
+        <p className="text-gray-500 text-lg leading-relaxed  mb-8">
           Le déroulement de "Ma ville est mon école" est pensé pour répondre aux
           besoins et aux capacités de découverte des enfants. Au long d'un
           trimestre environ, des architectes-médiatrices interviennent selon
@@ -57,24 +73,51 @@ export default function Home() {
           le travail des médiatrices entre chaque séance.
         </p>
 
-        <p className="text-gray-500 text-lg leading-relaxed  mb-8">
-          Ses objectifs, au bénéfice des élèves rendus pleinement acteurs de
-          leurs découvertes, sont clairs : faire de l’architecture et de la
-          ville une culture partagée ; se familiariser avec les notions et le
-          vocabulaire spécifiques de l’architecture, de la ville et du paysage
-          en vue de mieux comprendre notre cadre de vie ; sensibiliser à
-          l’espace architectural en général, apprendre à le regarder, à le
-          percevoir, à le comprendre et à le qualifier ; apprendre à observer
-          son environnement familier en particulier, à se repérer dans la ville
-          et dans son quartier.
-        </p>
+        <div className="text-gray-500 text-lg leading-relaxed mb-8">
+          <p>
+            Ses objectifs, au bénéfice des élèves rendus pleinement acteurs de
+            leurs découvertes, sont clairs :
+          </p>
+          <ul className="list-none  pl-6">
+            <li className="flex">
+              <span className="mr-3">-</span>
+              <span>
+                faire de l’architecture et de la ville une culture partagée ;
+              </span>
+            </li>
+
+            <li className="flex">
+              <span className="mr-3">-</span>
+              <span>
+                se familiariser avec les notions et le vocabulaire spécifiques
+                de l’architecture, de la ville et du paysage en vue de mieux
+                comprendre notre cadre de vie ;
+              </span>
+            </li>
+
+            <li className="flex">
+              <span className="mr-3">-</span>
+              <span>
+                sensibiliser à l’espace architectural en général, apprendre à le
+                regarder, à le percevoir, à le comprendre et à le qualifier ;
+              </span>
+            </li>
+
+            <li className="flex">
+              <span className="mr-3">-</span>
+              <span>
+                apprendre à observer son environnement familier en particulier,
+                à se repérer dans la ville et dans son quartier.
+              </span>
+            </li>
+          </ul>
+        </div>
 
         <p className="text-gray-500 text-lg leading-relaxed  mb-8">
           L’objectif est de les faire réfléchir à la transformation d’un
           bâtiment existant du quartier, qui répondrait à un besoin actuel, lié
           au vivre ensemble et à la problématique environnementale.
         </p>
-
         <p className="text-gray-500 text-lg leading-relaxed  mb-8">
           L’exercice proposé consiste à imaginer un nouvel usage pour une
           architecture familière en relation à son environnement, représenté par
@@ -113,10 +156,6 @@ export default function Home() {
             />
           </div>
         </div>
-
-        <p className="text-gray-500 text-lg leading-relaxed  mb-8">
-          Une visiste classe par classe
-        </p>
 
         {loading ? (
           <div className="flex justify-center items-center h-48">
