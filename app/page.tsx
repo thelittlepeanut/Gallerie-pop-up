@@ -141,14 +141,14 @@ export default function Home() {
         </p>
 
         <div className="grid grid-cols-2 gap-4 mb-8">
-          <div className="h-80 rounded-xl overflow-hidden">
+          <div className="h-120 rounded-xl overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/photo-enfants.jpg"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="h-80 rounded-xl overflow-hidden">
+          <div className="h-120 rounded-xl overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/photo-travaux.jpg"
