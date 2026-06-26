@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { supabase, Album, Photo } from '@/lib/supabase'
+import { ADMIN_MODE } from '@/lib/config'
 import Lightbox from '@/components/Lightbox'
 
 export default function AlbumPage() {
@@ -71,12 +72,14 @@ export default function AlbumPage() {
           Retour
         </Link>
         <h1 className="text-base font-semibold truncate absolute left-1/2 -translate-x-1/2 max-w-[50%]">{album.name}</h1>
-        <button
-          onClick={() => setShowDeleteConfirm(true)}
-          className="bg-white text-red-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 active:scale-95 transition-all"
-        >
-          Supprimer
-        </button>
+        {ADMIN_MODE && (
+          <button
+            onClick={() => setShowDeleteConfirm(true)}
+            className="bg-white text-red-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-100 active:scale-95 transition-all"
+          >
+            Supprimer
+          </button>
+        )}
       </header>
 
       <main className="max-w-7xl mx-auto px-6 py-12">
